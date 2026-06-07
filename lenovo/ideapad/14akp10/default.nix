@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ../../../common/cpu/amd
@@ -6,4 +8,7 @@
     ../../../common/pc/ssd
     ./TLP.nix
   ];
+
+  hardware.firmware = [ pkgs.sof-firmware ];
+
 }
